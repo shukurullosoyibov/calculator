@@ -1,0 +1,113 @@
+:root {
+  --primary: #b0063e;
+  --secondary: #8c38ff;
+   --dark: #131a26;
+   --light: #eee;
+
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 'Fira sans', sans-serif;
+
+
+}
+body{
+  background-color: var(--light);
+
+}
+.App{
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.Calculator{
+  width: 100%;
+  max-width: 400px;
+  background-color: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0px 2px 64px rgb(0, 0, 0, 0.2);
+}
+.display{
+  padding: 16px;
+  text-align: right;
+  background-color: var(--dark);
+  color: var(--light );
+  font: 24px;
+
+}
+.display span{
+  font: 14px;
+  color: #888;
+}
+button{
+  border: none;
+  outline: none;
+  appearance: none;
+  color: #fff;
+  font: 20px;
+  padding: 16px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+button:hover{
+  opacity: 0.9;
+
+}
+.operators{
+  display: flex;
+
+}
+.operators button{
+  flex: 1 1 0%;
+  background: var(--primary);
+  font-weight: 700;
+}
+.digits{
+  display: flex;
+ flex-wrap: wrap;
+
+}
+.digits button{
+  flex: 1 .4 33.333333%;
+  max-width: 33.3333;
+  background-color: var(--dark);
+
+}
+
+
+
+.bubble {
+  display: none;
+  position: relative;
+  background: linear-gradient(10deg, #1079ce 26%, #2b00ff 79%);
+  color: #FFFFFF;
+  font-family: Courier New;
+  font-size: 7px;
+  line-height: 49px;
+  box-shadow: 11px -6px 3px 3px #869deb;
+  text-align: center;
+  width: 92px;
+  height: 47px;
+  border-radius: 9px;
+  padding: 0px;
+}
+.bubble:after {
+  content: '';
+  position: absolute;
+  display: block;
+  width: 0;
+  z-index: 1;
+  border-style: solid;
+  border-color: #1079ce transparent;
+  border-width: 8px 6px 0;
+  bottom: -8px;
+  left: 26%;
+  margin-left: -6px;
+}
+
+
